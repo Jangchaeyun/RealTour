@@ -6,4 +6,4 @@ export default function SignUp() {
       Sign Up
     </div>
   );
-}
+ }
