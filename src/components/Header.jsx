@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom'
 import { getAuth, onAuthStateChanged } from 'firebase/auth'
-import Logo from '../assest/realtour.png'
+import Logo from '../assests/realtour.png'
 
 export default function Header() {
   const [pageState, setPageState] = useState("로그인")
@@ -23,7 +23,7 @@ export default function Header() {
     }
   }
   return (
-    <div className='bg-white border-b shadow-sm sticky top-0 z-50'>
+    <div className='bg-white border-b shadow-sm sticky top-0 z-40'>
         <header className='flex justify-between items-center px-3 max-w-6xl mx-auto'>
             <div>
                 <img
