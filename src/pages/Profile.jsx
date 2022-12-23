@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { getAuth, updateProfile } from 'firebase/auth'
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { db } from '../firebase';
 import { doc, updateDoc } from 'firebase/firestore';
+import { FcHome } from 'react-icons/fc'
 
 export default function Profile() {
   const auth = getAuth();
@@ -85,6 +86,12 @@ export default function Profile() {
               </p>
             </div>
           </form>
+          <button type="submit" className='w-full bg-red-500 text-white uppercase px-7 py-3 text-sm font-medium rounded shadow-md hover:bg-red-600 transition duration-150 ease-in-out hover:shadow-lg active:bg-red-700'>
+            <Link to = "/create-listing" className="flex justify-center items-center ">
+              <FcHome className="mr-2 text-3xl bg-blue-200 rounded-full p-1 border-2"/>
+              속소 등록
+            </Link>
+          </button>
         </div>
       </section>
     </>
